@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+{% load static %}
+  {% block content %}
+
+   <link rel="stylesheet" href="/static/styles.css">
+   <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"integrity="sha384-DNOHZ68U8hZfKX
+   OrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+   <nav class="navbar navbar-inverse nav">
+    <ul >
+      <img class="icon" src="{% static 'mysite/images/icon.png' %}" alt="icon">
+      <li><a href="/mysite/">Home</li>
+        <li><a href="/mysite/create">Add <i class="fas fa-plus"></i></li>
+     </ul>
+
+      <a href='/mysite/profile'><img class="loginpic2" src="{% static 'mysite/images/loginpic.png' %}" alt="icon"></a>
+  </nav>
+
+
+  <form class="navbar-form navbar-left sear" role="search">
+    <div class="form-group">
+      <input type="text" name="q" class="form-control search" placeholder="Search">
+                     <!--whole search code is copied from internet or bootstrap but name=q is added extra,
+                       if we not add name=q the searched one will not go to url, q is query where query means searched result
+                           go to views and check it how it veiws-->
+    </div>
+    <button type="submit" class="btn btn-default search submit">Submit</button>
+
+  </form>
+  <div class="container">
+     <div class="row">
+        <div class="col-md-10">
+
+        </div>
+        <div class="col-md-2">
+          <a class="logout" href="/logout/">logout</a>
+        </div>
+     </div>
+  </div>
+
+ <br><h1>MY PROFILE</h1><br>
+
+    {% for i in user_posts %}
+
+    <div class="row">
+      <div class="col-md-1 col-xs-1">
+
+
+      </div>
+
+       <div class="col-md-6 col-xs-10 profile_posts">
+          <div class="thumbnail ">
+             <div class="caption prof_posts">
+
+
+               <a href="{{i.id}}/"> <h3 style="color:red;">{{i.title}}  </h3></a><br>
+
+           {% if i.image %}       <!-- if we not given if loop, if there is no image to that post whole page will not load-->
+            <a href="{{i.id}}"> <img src="{{i.image.url}}" alt="image" class="img-responsive"></a>
+           {% endif %}
+               <br>
+               <p>{{i.content}}</p><br>
+
+
+    <!-- <a href="{{i.id}}" class="btn btn-primary open" role="button">Open</a> -->
+    <div class="fb-like like_index" data-href={{request.build_absolute_uri}} data-layout="standard" data-action="like"
+    data-size="small" data-show-faces="true" data-share="true"></div>
+
+               <div class='pubd'> {{i.published_date|timesince}} ago</div>
+             </div>
+           </div>
+        </div>
+
+      <div class="col-md-3 col-sm-2 edit_profile">
+        <div class="thumbnail login_form edit_pro">
+          <div class="caption">
+              <h2  style="text-align:center;">UPDATE PROFILE</h2><br><br>
+                <form method="POST"> {% csrf_token %}
+
+                      {{form.as_p}}
+                      <input class="login_button" type="submit" value="Update"/><br><br>
+
+                  </form>
+
+
+
+
+
+      </div>
+      </div>
+      </div>
+
+      </div>
+      <br><br>
+    {% endfor %}
+
+    <div class="pagination"> <!-- this is 'pagination' to display page number,goto nxt,goto previous page(search as 'pagintion' in documentation)-->
+      <span class="step-links">
+          {% if present_page.has_previous %}
+              <a href="?page=1">&laquo; first</a>
+              <a href="?page={{ title.previous_page_number }}">previous</a>
+          {% endif %}
+
+          <span class="current">
+              Page {{ present_page.number }} of {{ present_page.paginator.num_pages }}.
+          </span>
+
+          {% if present_page.has_next %}
+              <a href="?page={{ present_page.next_page_number }}">next</a>
+              <a href="?page={{ present_page.paginator.num_pages }}">last &raquo;</a>
+          {% endif %}
+      </span>
+  </div>
+
+ {%endblock content %}

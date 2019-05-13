@@ -1,0 +1,455 @@
+
+body{
+ background-image: url(/static/mysite/images/bg.jpg);
+ background-attachment: fixed;
+}
+.savebut{
+  position: relative;
+  left: 560px;
+}
+
+.editprofile{
+  color: #52D72!important;
+  position: relative;bottom: 80px; left: 110px;
+}
+.edit_profile{
+  width: 500px;
+  position: absolute;bottom: 160px; left: 600px;
+}
+
+h3,p{
+  text-align:center;  <!-- if any style not working once go to static/styles.css and reload the page-->
+}
+.logout{
+  position: relative;left: 96px;bottom: 70px;
+}
+.logout_detail{
+  position: relative;left: 102px;bottom: 20px;
+}
+.profile_head{
+  position: relative;right: 140px;
+}
+h1{
+  color: white;
+  font-family: 'Audiowide', cursive;
+  text-align: center;
+}
+
+.plans{
+  position: relative; left: 100px;
+}
+.login_button{
+  width: 130px;
+  position: relative;left: 225px;
+}
+.login_button2{
+  position: relative;left: 10%;
+}
+.login_form{
+  background-color: #8CCDB9;
+  position: relative;top: 150px;left: 280px;
+}
+.pubd{
+  text-align: right;
+  position: relative;bottom: 10px;
+}
+.open{
+  position: relative;top: 25px;
+}
+.del{
+  border: 1px solid red;
+  background-color: red;
+  margin-left: 85%;
+  position: relative;top: 50px;
+}
+.goback{
+  border: 1px solid blue;
+  background-color: blue;
+  margin-right: 100%;
+  position: relative;bottom: -20px;
+}
+.goback_profile{
+  position: relative;bottom: 27px; right: 210px;
+}
+.update{
+  border: 1px solid #F9974D;
+  background-color: #F9974D;
+  position: relative;top: 15px; left: 130px;
+}
+.share{
+  padding-right: 30px;
+}
+.user{
+  color: #52DB72;
+  position: absolute;left: 4%; top:-30PX;
+}
+.like_index{
+  position: relative;top: 15px;
+}
+.like_detail{
+  position: relative;bottom: 15px;
+}
+li{
+  padding-left: 50px;
+  color:white;
+  padding-top: 14px;
+  float: left;
+}
+.search{
+  height: 30px;
+  position: relative;bottom: 69px;
+  left: 750px;
+}
+ul{
+  list-style-type: none;
+}
+.nav{
+  height: 25px;
+}
+.navdetail{
+  height: 25px;
+}
+.icon{
+  height: 50px;
+  position: relative;right: 210px; bottom: 1px;
+}
+.loginpic{
+  height: 30px;
+  position: relative;left: 820px;
+  bottom: 1px;
+}
+.loginpic2{
+  height: 30px;
+    position: relative;left: 1089px; bottom: 51px;
+}
+.post{
+  width: 60px;
+  height: 40px;
+  border: 2px solid black;
+  background-color: #4ED1A5;
+}
+.profilename{
+  font-family: 'ZCOOL XiaoWei', serif;
+  text-align: center;
+  color: #E33C3C;
+}
+.login_to{
+  color: white;
+}
+
+
+ @media (max-width: 1199px){
+   .edit_profile{
+     width: 500px;
+     position: absolute;bottom: 160px; left: 400px;
+   }
+   .logout{
+     position: relative;left: 78px;bottom: 70px;
+   }
+   .logout_detail{
+     position: relative;left: 70px;
+   }
+   .login_button{
+     position: relative;left: 180px;
+   }
+
+   h1{
+     position: relative;left: 30px;
+   }
+   .sear{
+      position: relative;right: 200px;
+   }
+   .loginpic2{
+   position: relative;left: 900px;
+   }
+   .loginpic{
+     position: relative;left: 620px;
+   }
+   .profilename{
+     position: relative;left: 25px;
+   }
+
+ }
+@media (min-width: 768px) and (max-width: 991px)
+{
+  .profile_posts{
+    position: relative;right: 140px;
+  }
+  .edit_profile{
+    width: 300px;
+    position: absolute;bottom: 160px; right: 400px;
+  }
+  .logout{
+    position: relative;left: 352px;bottom: 23px;
+  }
+  .logout_detail{
+    position: relative;left: 656px;bottom: 20px;
+  }
+  .login_button{
+    position: relative;left: 125px;
+  }
+  .sear{
+  position: relative;right: 400px;
+  }
+  .loginpic2{
+  position: relative;left: 670px;
+  }
+  .loginpic{
+    position: relative;left: 400px;
+  }
+}
+@media (min-width: 566px) and (max-width: 767px){
+  .profile_posts{
+    display: none;
+  }
+  .edit_profile{
+    width: 550px;
+    position: absolute;bottom: 160px; left: 0px;
+  }
+  .logout{
+    position: relative;left: 455px;bottom: 115px;
+  }
+  .logout_detail{
+    position: relative;left: 456px;bottom: 20px;
+  }
+  .login_form{
+    position: relative;top: 150px;left: 40px;
+  }
+  .login_button{
+    position: relative;left: 310px;
+  }
+
+  h1{
+    position: relative;left: 30px;
+  }
+  .sear{
+    width: 150px;
+  position: relative;right: 480px;
+
+  }
+  .submit{
+    width: 60px;
+    position: relative;left: 877px; bottom: 104px;
+  }
+  .loginpic2{
+  position: relative;left: 475px;
+  }
+  .loginpic{
+    position: relative;left: 200px;
+  }
+  .profilename{
+    position: relative;left: 35px;
+  }
+}
+@media (min-width: 404px) and (max-width: 565px){
+  .profile_posts{
+    display: none;
+  }
+  .edit_profile{
+    width: 450px;
+    position: absolute;bottom: 160px; left: 20px;
+  }
+  .logout{
+    position: relative;left: 330px;bottom: 150px;
+  }
+  .logout_detail{
+    position: relative;left: 306px;bottom: 20px;
+  }
+  .login_form{
+    position: relative;top: 150px;left: 40px;
+  }
+  .login_button{
+    position: relative;left: 210px;
+  }
+
+  .profilename{
+    position: relative;left: 35px;
+  }
+  h1{
+    position: relative;left: 30px;top: -13px;
+  }
+.nav{
+  height: 100px;
+}
+.loginpic2{
+position: relative;left: 320px;
+}
+.sear{
+  width: 150px;
+position: relative;right: 600px;
+
+}
+.submit{
+  width: 60px;
+  position: relative;left: 877px; bottom: 104px;
+}
+.loginpic{
+  position: relative;left: 50px;
+}
+}
+@media (min-width: 382px) and (max-width: 403px){
+  .profile_posts{
+    display: none;
+  }
+  .edit_profile{
+    width: 450px;
+    position: absolute;bottom: 160px; left: 20px;
+  }
+
+  .logout{
+    position: relative;left: 273px;bottom: 115px;
+  }
+  .logout_detail{
+    position: relative;left: 306px;bottom: 20px;
+  }
+  .profilename{
+    position: relative;left: 35px;
+  }
+  .login_form{
+    position: relative;top: 50px;left: 40px;
+  }
+  .login_button{
+    position: relative;left: 130px;
+  }
+
+  h1{
+    position: relative;left: 30px;top: -23px;
+  }
+  .nav{
+    height: 100px;
+  }
+  li{
+    font-size: 17px;
+    padding-right: 10px;
+  }
+  .icon{
+    position: relative;right: 240px;
+  }
+  .sear{
+    width: 170px;
+  position: relative;right: 700px;
+
+  }
+  .submit{
+    width: 60px;
+    position: relative;left: 897px; bottom: 104px;
+  }
+  .loginpic2{
+  position: relative;left: 290px; top: 1px;
+  }
+  .loginpic{
+    position: relative;left: 14px;top: 2px;
+  }
+}
+@media (min-width: 316px) and (max-width: 381px){
+  .profile_posts{
+    display: none;
+  }
+  .edit_profile{
+    width: 350px;
+    position: absolute;bottom: 160px; left: -20px;
+  }
+  .logout{
+    position: relative;left: 202px;bottom: 115px;
+  }
+  .logout_detail{
+    position: relative;left: 250px;bottom: 20px;
+  }
+  .profilename{
+    position: relative;left: 35px;
+  }
+  .login_form{
+    position: relative;top: 10px;left: 40px;
+  }
+  .login_button{
+    position: relative;left: 50px;
+  }
+
+  h1{
+    position: relative;left: 30px;top: -13px;
+  }
+  .nav{
+    height: 100px;
+  }
+
+  .icon{
+    width: 40px;
+    height: 40px;
+    position: relative;right: 210px; top: 3px;
+  }
+  .sear{
+    width: 150px;
+  position: relative;right: 740px;
+
+  }
+  .submit{
+    width: 60px;
+    position: relative;left: 877px; bottom: 104px;
+  }
+  .loginpic2{
+  position: relative;left: 220px; top: 10px;
+  }
+  .loginpic{
+    position: relative;left:3px; top: 3px;
+  }
+
+  h1{
+    position: relative;bottom: 30px;
+  }
+
+}
+@media (max-width: 315px){
+  .profile_posts{
+    display: none;
+  }
+  .edit_profile{
+    width: 300px;
+    position: absolute;bottom: 160px; left: -280px;
+  }
+  .logout{
+    position: relative;left: 222px;bottom: 150px;
+  }
+  .logout_detail{
+    position: relative;left: 178px;bottom: 57px;
+  }
+  .profilename{
+    position: relative;left: 35px;
+  }
+  h1{
+    position: relative;left: 30px;top: -13px;
+  }
+.nav{
+  height: 155px;
+}
+.icon{
+  width: 60px;
+  height: 60px;
+  position: relative;right: 120px; top: 25px;
+}
+.loginpic2{
+position: relative;left: 70px; bottom: 35px;
+width: 35px;
+height: 35px;
+}
+li{
+  position: relative;left: 20px;
+}
+h1{
+  position: relative;bottom: 30px;
+}
+.sear{
+  width: 150px;
+position: relative;right: 710px;
+
+}
+.submit{
+  width: 60px;
+  position: relative;left: 877px; bottom: 104px;
+}
+.navdetail{
+  height: 110px;
+}
+.loginpic{
+  position: relative;left:3px; top: 5px;
+}
+}

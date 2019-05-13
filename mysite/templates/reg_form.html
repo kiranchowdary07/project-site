@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="col-sm-6 col-md-6">
+  <div class="thumbnail login_form">
+    <div class="caption">
+        <h2  style="text-align:center;">REGISTER</h2><br><br>
+          <form method="POST"> {% csrf_token %}
+
+                {{form.as_p}}
+                <input class="login_button" type="submit" value="Sign Up"/><br><br>
+
+            </form>
+
+            <a href="/">  <input class="login_button2" type="submit" value="Login"/></a>
+
+
+
+</div>
+</div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% load static %}
+  {% block content %}
+
+
+        <nav class="navbar navbar-inverse nav">
+
+          <ul >
+            <img class="icon" src="{% static 'mysite/images/icon.png' %}" alt="icon">
+      <!-- first of all we need to create mysite(same name as app name) in static, in mysite create other folder called images so than
+           we can easyly understand and open image and drag to that created images folder, before that we need to load static at top.
+                <img src="{% static 'mysite/images/icon.png' %}" alt="icon"> (in django we need to write in brackets and put %)
+                                here 'static' should not include in url we are saying this is a static file then followed by url-->
+
+
+                                <li class="plans"><a href="/mysite/">Home</li>
+                                  <li class="plans"><a href="/mysite/plans">Plans</li>
+                                  <li class="plans"><a href="/mysite/create">Add <i class="fas fa-plus"></i></li>
+
+            <a href="/mysite/profile"><img class="loginpic" src="{% static 'mysite/images/loginpic.png' %}" alt="icon"></a>
+           </ul>
+        </nav>
+
+
+           <div class="row">
+
+             <div class="col-md-3 col-sm-3">
+                <!--empty space-->
+             </div>
+             <div class="col-sm-6 col-md-6">
+               <div class="thumbnail">
+                 <div class="caption">
+
+
+                       <div><h3 style="color:red;">{{instance.title}}</h3></div>
+
+                       {% if instance.image %}           <!-- if we not given if loop, if we open other post which does not have image will not open-->
+                       <img src="{{instance.image.url}}" alt="image" class="img-responsive">
+                       {% endif %}
+                        <br>
+
+
+          <form method="POST" enctype="multipart/form-data"> {% csrf_token %} <!-- from here main part,above all is css, we can write own-->
+                {{form.as_p}}
+                <input class="post" type="submit" value="post"/>
+
+            </form>  <br><br>
+
+                 </div>
+               </div>
+             </div>
+
+           </div>
+
+
+</div>
+   {% endblock content %}

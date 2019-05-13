@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+{% load static %}
+  {% block content %}
+
+  <link rel="stylesheet" href="/static/styles.css">
+
+
+  
+  <link rel="stylesheet" href="/static/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"integrity="sha384-DNOHZ68U8hZfKX
+  OrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+  <nav class="navbar navbar-inverse nav">
+   <ul >
+     <img class="icon" src="{% static 'mysite/images/icon.png' %}" alt="icon">
+     <li class="plans"><a href="/mysite/">Home</li>
+       <li class="plans"><a href="/mysite/plans">Plans</li>
+       <li class="plans"><a href="/mysite/create">Add <i class="fas fa-plus"></i></li>
+    </ul>
+
+     <a href='/mysite/profile'><img class="loginpic2" src="{% static 'mysite/images/loginpic.png' %}" alt="icon"></a>
+ </nav>
+
+
+ <form class="navbar-form navbar-left sear" role="search">
+   <div class="form-group">
+     <input type="text" name="q" class="form-control search" placeholder="Search">
+                    <!--whole search code is copied from internet or bootstrap but name=q is added extra,
+                      if we not add name=q the searched one will not go to url, q is query where query means searched result
+                          go to views and check it how it veiws-->
+   </div>
+   <button type="submit" class="btn btn-default search submit">Submit</button>
+
+ </form>
+ <div class="container">
+    <div class="row">
+       <div class="col-md-10">
+
+       </div>
+       <div class="col-md-2">
+         <a class="logout" href="/logout/">logout</a>
+       </div>
+    </div>
+ </div>
+
+<div class="container">
+           
+    <table class="table table-bordered">
+      <thead style="color:white">
+        <tr style="color:white">
+          <th>PLAN</th>
+          <th>Status Limit</th>
+          <th>Like Limit</th>
+          <th>Comment Limit</th>
+        </tr style="color:white">
+      </thead>
+      <tbody>
+        <tr style="color:white">
+          <td>1</td>
+          <td>10</td>
+          <td>50</td>
+          <td>25</td>
+        </tr>
+        <tr style="color:white">
+          <td>2</td>
+          <td>20</td>
+          <td>70</td>
+          <td>40</td>
+        </tr>
+        <tr style="color:white">
+            <td>3</td>
+            <td>30</td>
+            <td>75</td>
+            <td>50</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 style="color:white">Assign Plan</h2>
+
+  <div class="col-sm-6 col-md-6">
+      <div class="thumbnail login_form">
+        <div class="caption">
+          
+            <form method="POST" enctype="multipart/form-data"> {% csrf_token %} <!-- from here main part,above all is css, we can write own-->
+              {{form.as_p}}   
+      
+      
+             <input class="plan_button" type="submit" value="Submit"/><br><br>            
+            
+                </form>
+
+                {% if messages %}
+<ul style=" position:relative; bottom:40px; left:120px;">
+   {% for message in messages %}
+	   <li style="color:green">{{ message }}</li>
+   {% endfor %}
+</ul>
+{% endif %}
+    
+    </div>
+    </div>
+    </div>
+  
+
+  {% endblock content %}
+
+  

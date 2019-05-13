@@ -1,0 +1,7 @@
+{% if messages %}
+  <ul class="messages">         <!--this we can find in documentation of django, search as "displaying messages" in search bar-->
+    {% for i in messages %}
+   <li{% if i.tags %} class="{{ i.tags }}"{% endif %}>{{ i }}</li>
+   {% endfor %}
+  </ul>
+{% endif %}
